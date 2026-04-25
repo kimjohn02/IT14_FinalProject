@@ -50,62 +50,68 @@
 <div class="row mb-4"> 
     <div class="col-md-4 mb-3">
         <div class="card report-card border-primary h-100">
-            <div class="card-body">
-                <h6 class="card-title text-muted mb-1">
-                    <i class="bi bi-receipt text-primary me-2"></i>Total Transactions
-                </h6>
-                <h3 class="fw-bold text-primary mb-0 text-end">{{ $salesData['summaryStats']->total_transactions ?? 0 }}</h3>
+            <div class="card-body d-flex align-items-center justify-content-between py-3">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-receipt text-primary me-2" style="font-size: 1.8rem;"></i>
+                    <h6 class="card-title text-muted m-0 text-uppercase" style="font-size: 0.8rem;">Total Transactions</h6>
+                </div>
+                <h3 class="fw-bold text-primary m-0">{{ $salesData['summaryStats']->total_transactions ?? 0 }}</h3>
             </div>
         </div>
     </div>
     <div class="col-md-4 mb-3">
         <div class="card report-card border-success h-100">
-            <div class="card-body">
-                <h6 class="card-title text-muted mb-1">
-                    <i class="bi bi-box-seam text-primary me-2"></i>Items Sold
-                </h6>
-                <h3 class="fw-bold text-primary mb-0 text-end">{{ $salesData['summaryStats']->total_items_sold ?? 0 }}</h3>
+            <div class="card-body d-flex align-items-center justify-content-between py-3">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-box-seam text-primary me-2" style="font-size: 1.8rem;"></i>
+                    <h6 class="card-title text-muted m-0 text-uppercase" style="font-size: 0.8rem;">Items Sold</h6>
+                </div>
+                <h3 class="fw-bold text-primary m-0">{{ $salesData['summaryStats']->total_items_sold ?? 0 }}</h3>
             </div>
         </div>
     </div>
     <div class="col-md-4 mb-3">
         <div class="card report-card border-info h-100">
-            <div class="card-body">
-                <h6 class="card-title text-muted mb-1">
-                    <span class="text-success me-2 fs-5">₱</span>Gross Revenue
-                </h6>
-                <h3 class="fw-bold text-success mb-0 text-end">₱{{ number_format($salesData['summaryStats']->gross_revenue ?? 0, 2) }}</h3>
+            <div class="card-body d-flex align-items-center justify-content-between py-3">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-cash-stack text-success me-2" style="font-size: 1.8rem;"></i>
+                    <h6 class="card-title text-muted m-0 text-uppercase" style="font-size: 0.8rem;">Gross Revenue</h6>
+                </div>
+                <h3 class="fw-bold text-success m-0">₱{{ number_format($salesData['summaryStats']->gross_revenue ?? 0, 2) }}</h3>
             </div>
         </div>
     </div>
 
     <div class="col-md-4 mb-3">
         <div class="card report-card border-danger h-100">
-            <div class="card-body">
-                <h6 class="card-title text-muted mb-1">
-                    <i class="bi bi-arrow-return-left text-danger me-2"></i>Total Refunds
-                </h6>
-                <h3 class="fw-bold text-danger mb-0 text-end">-₱{{ number_format($salesData['summaryStats']->total_returns ?? 0, 2) }}</h3>
+            <div class="card-body d-flex align-items-center justify-content-between py-3">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-arrow-return-left text-danger me-2" style="font-size: 1.8rem;"></i>
+                    <h6 class="card-title text-muted m-0 text-uppercase" style="font-size: 0.8rem;">Total Refunds</h6>
+                </div>
+                <h3 class="fw-bold text-danger m-0">-₱{{ number_format($salesData['summaryStats']->total_returns ?? 0, 2) }}</h3>
             </div>
         </div>
     </div>
     <div class="col-md-4 mb-3">
         <div class="card report-card border-success border-3 h-100">
-            <div class="card-body">
-                <h6 class="card-title text-muted mb-1">
-                    <i class="bi bi-wallet2 text-success me-2"></i>Net Revenue
-                </h6>
-                <h3 class="fw-bold text-success mb-0 text-end">₱{{ number_format($salesData['summaryStats']->net_revenue ?? 0, 2) }}</h3>
+            <div class="card-body d-flex align-items-center justify-content-between py-3">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-wallet2 text-success me-2" style="font-size: 1.8rem;"></i>
+                    <h6 class="card-title text-muted m-0 text-uppercase" style="font-size: 0.8rem;">Net Revenue</h6>
+                </div>
+                <h3 class="fw-bold text-success m-0">₱{{ number_format($salesData['summaryStats']->net_revenue ?? 0, 2) }}</h3>
             </div>
         </div>
     </div>
     <div class="col-md-4 mb-3">
         <div class="card report-card border-warning h-100">
-            <div class="card-body">
-                <h6 class="card-title text-muted mb-1">
-                    <i class="bi bi-calculator text-success me-2"></i>Average Transaction
-                </h6>
-                <h3 class="fw-bold text-success mb-0 text-end">₱{{ number_format($salesData['summaryStats']->avg_transaction_value ?? 0, 2) }}</h3>
+            <div class="card-body d-flex align-items-center justify-content-between py-3">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-calculator text-success me-2" style="font-size: 1.8rem;"></i>
+                    <h6 class="card-title text-muted m-0 text-uppercase" style="font-size: 0.8rem;">Average Transaction</h6>
+                </div>
+                <h3 class="fw-bold text-success m-0">₱{{ number_format($salesData['summaryStats']->avg_transaction_value ?? 0, 2) }}</h3>
             </div>
         </div>
     </div>

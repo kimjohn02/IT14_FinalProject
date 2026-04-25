@@ -55,12 +55,12 @@
     <div class="col-md-3 mb-3">
         <a href="{{ route('reports.sales.index') }}" class="text-decoration-none">
             <div class="card dashboard-card bg-success text-white h-100 clickable-card">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <span class="stat-label">Total Revenue</span>
-                        <i class="bi bi-cash-stack" style="font-size: 1.2rem; opacity: 0.8;"></i>
+                <div class="card-body d-flex align-items-center justify-content-between py-3">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-cash-stack me-2" style="font-size: 1.8rem; opacity: 0.8;"></i>
+                        <span class="stat-label m-0">Total Revenue</span>
                     </div>
-                    <div class="stat-value text-end" style="font-size: 1.6rem; font-weight: bold;">
+                    <div class="stat-value text-end m-0">
                         ₱{{ number_format($totalRevenue, 0) }}
                     </div>
                 </div>
@@ -71,12 +71,12 @@
     <div class="col-md-3 mb-3">
         <a href="{{ route('reports.sales.index') }}" class="text-decoration-none">
             <div class="card dashboard-card bg-success text-white h-100">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <span class="stat-label">Gross Profit</span>
-                        <i class="bi bi-graph-up" style="font-size: 1.2rem; opacity: 0.8;"></i>
+                <div class="card-body d-flex align-items-center justify-content-between py-3">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-graph-up me-2" style="font-size: 1.8rem; opacity: 0.8;"></i>
+                        <span class="stat-label m-0">Gross Profit</span>
                     </div>
-                    <div class="stat-value text-end" style="font-size: 1.6rem; font-weight: bold;">
+                    <div class="stat-value text-end m-0">
                         ₱{{ number_format($grossProfit, 0) }}
                     </div>
                 </div>
@@ -87,12 +87,12 @@
     <div class="col-md-3 mb-3">
         <a href="{{ route('reports.sales.index') }}" class="text-decoration-none">
             <div class="card dashboard-card bg-secondary text-white h-100">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <span class="stat-label">Total Transactions</span>
-                        <i class="bi bi-receipt" style="font-size: 1.2rem; opacity: 0.8;"></i>
+                <div class="card-body d-flex align-items-center justify-content-between py-3">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-receipt me-2" style="font-size: 1.8rem; opacity: 0.8;"></i>
+                        <span class="stat-label m-0">Total Transactions</span>
                     </div>
-                    <div class="stat-value text-end" style="font-size: 1.6rem; font-weight: bold;">
+                    <div class="stat-value text-end m-0">
                         {{ number_format($totalTransactions, 0) }}
                     </div>
                 </div>
@@ -103,12 +103,12 @@
     <div class="col-md-3 mb-3">
         <a href="{{ route('reports.sales.index') }}" class="text-decoration-none">
             <div class="card dashboard-card bg-secondary text-white h-100">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <span class="stat-label">Average Order</span>
-                        <i class="bi bi-cart-check" style="font-size: 1.2rem; opacity: 0.8;"></i>
+                <div class="card-body d-flex align-items-center justify-content-between py-3">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-cart-check me-2" style="font-size: 1.8rem; opacity: 0.8;"></i>
+                        <span class="stat-label m-0">Average Order</span>
                     </div>
-                    <div class="stat-value text-end" style="font-size: 1.6rem; font-weight: bold;">
+                    <div class="stat-value text-end m-0">
                         ₱{{ number_format($averageOrderValue, 0) }}
                     </div>
                 </div>
