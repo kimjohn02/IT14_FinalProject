@@ -28,6 +28,8 @@ class AuthController extends Controller
             'password' => 'required|string',
         ]);
 
+    
+
         $user = User::where('username', $credentials['username'])
             ->where('is_active', true)
             ->first();
