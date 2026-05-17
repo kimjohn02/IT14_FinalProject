@@ -117,12 +117,12 @@
                         <span class="input-group-text">
                             <i class="bi bi-lock"></i>
                         </span>
-                        <input type="password" class="form-control border-end-0" 
+                        <input type="password" class="form-control" 
                                id="password" name="password" 
                                placeholder="Enter your password" required>
-                        <span class="input-group-text bg-transparent border-start-0" id="togglePassword" style="cursor: pointer;">
+                        <button class="btn btn-outline-secondary" type="button" id="togglePassword">
                             <i class="bi bi-eye"></i>
-                        </span>
+                        </button>
                     </div>
                 </div>
                 
@@ -138,22 +138,24 @@
     <!-- Bootstrap JS -->
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     <script>
-        const togglePassword = document.querySelector("#togglePassword");
-        const passwordInput = document.querySelector("#password");
-      
-        togglePassword.addEventListener("click", function () {
-          const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
-          passwordInput.setAttribute("type", type);
-      
-          this.querySelector("i").classList.toggle("bi-eye");
-          this.querySelector("i").classList.toggle("bi-eye-slash");
-        });
         const alerts = document.querySelectorAll('.alert-success, .alert-danger, .alert-warning');
         alerts.forEach(alert => {
             setTimeout(() => {
                 const bsAlert = new bootstrap.Alert(alert);
                 bsAlert.close();
             }, 5000);
+        });
+
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+        
+        togglePassword.addEventListener('click', function (e) {
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            
+            const icon = this.querySelector('i');
+            icon.classList.toggle('bi-eye');
+            icon.classList.toggle('bi-eye-slash');
         });
       </script>
 </body>
